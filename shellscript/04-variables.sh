@@ -3,7 +3,7 @@
 #Executes the date command and store the output into the variable
 START_TIME=$(date +%s)
 
-echo "Script executes at :$"
+echo "Script executes at :$START_TIME"
 
 END_TIME=$(date +%s)
 
