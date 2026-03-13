@@ -1,0 +1,12 @@
+COMMON COMMANDS->
+1.ls -? list>[C[C[C[C[C[C[C
+2.cp -> copy
+3.mv -> move or remane[C[C[Cname
+4.rm -> redelete
+5. ppwd -> present working directory.
+FILE & VIEW-> 
+cat1.cat-> write and display file content
+2.echo -> print output
+3..[3~[3~\[A[A[A[B[B[B[B[B[B[B[B[B
+
+

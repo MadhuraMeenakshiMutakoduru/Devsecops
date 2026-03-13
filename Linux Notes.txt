@@ -1,0 +1,251 @@
+Alright Madhura, you’re asking for the full lowdown on every command and concept, step by step, so you can really understand what’s going on and not just memorize. I’ll break it down category by category, and explain each command and why it’s used, with examples.
+1️⃣ Linux Fundamentals
+Linux OS Basics
+ What Linux is: An open-source operating system (OS) based on UNIX.
+ Why used in servers: Stable, secure, lightweight, flexible, free. Most cloud servers run Linux.
+ Linux distributions: Variants of Linux with different package managers and default tools:
+o Ubuntu/Debian: Popular for ease of use.
+o CentOS/RHEL: Enterprise servers, stable and secure.
+o Differences: Package management (apt vs yum), default config files, systemctl vs service commands.
+ Kernel vs User Space:
+o Kernel: Core of OS, interacts directly with hardware.
+o User Space: Where applications and commands run.
+File System Structure
+Directory
+Purpose
+/
+Root directory, top of the file system
+/home
+User home directories
+/etc
+System configuration files
+/var
+Variable data like logs, databases
+/tmp
+Temporary files
+/usr
+User programs, libraries, docs
+/bin
+Essential binary executables
+Directory
+Purpose
+/sbin
+System admin binaries (root-only)
+ File types:
+o Regular file: normal text or data file.
+o Directory: folder.
+o Symbolic link: shortcut to another file.
+o Device files: represent hardware.
+o Sockets: for inter-process communication.
+ Hidden files: Start with .; e.g., .bashrc.
+File & Directory Management Commands
+Command
+What it does
+Example
+ls
+List files in a directory
+ls -l (detailed), ls -a (includes hidden files)
+cd
+Change directory
+cd /etc
+pwd
+Print working directory
+Shows full path
+mkdir
+Make a new directory
+mkdir project_test
+rmdir
+Remove an empty directory
+rmdir old_folder
+rm
+Remove files or folders
+rm file.txt, rm -r folder (recursive)
+cp
+Copy files or directories
+cp file.txt file_backup.txt, cp -r folder1 folder2
+mv
+Move or rename
+mv file.txt notes.txt
+tree
+Show folder structure as tree
+tree /home/user
+ Absolute vs relative path:
+o Absolute: full path from root /home/user/file.txt
+o Relative: relative to current directory ../file.txt
+File Permissions & Ownership
+ Permissions: r = read, w = write, x = execute
+ Viewing permissions: ls -l
+ -rw-r--r-- 1 user group 123 Jan 1 file.txt
+o First char: file type (- regular, d directory)
+o Next 3: owner permissions
+o Next 3: group permissions
+o Last 3: others
+ Commands:
+o chmod 644 file.txt → change permissions
+o chown user file.txt → change owner
+o chgrp group file.txt → change group
+ Special permissions:
+o Sticky bit: only owner can delete file in directory (chmod +t)
+o setuid: file runs as owner (chmod u+s file)
+o setgid: file/group inherits parent group (chmod g+s folder)
+2️⃣ Common Linux Commands
+Viewing & Editing Files
+Command
+Use
+cat file.txt
+Show full file content
+more file.txt
+Paginate file (scroll with space)
+less file.txt
+Like more, but scroll up/down
+head file.txt
+Show first 10 lines
+tail file.txt
+Show last 10 lines
+nano file.txt
+Open file in nano editor (easy)
+vi file.txt
+Open file in vi editor (advanced)
+Searching & Finding
+Command
+Use
+grep "text" file.txt
+Search for text inside file
+find /path -name "*.txt"
+Find files by name
+locate file.txt
+Quickly locate files (database must be updated)
+which command
+Path of executable (e.g., which python)
+whereis command
+Shows location of binary, source, and man page
+Process Management
+Command
+Use
+ps
+Show current processes
+top
+Interactive view of CPU, memory usage
+htop
+Advanced top (optional)
+kill PID
+Stop a process
+killall process_name
+Kill all processes with that name
+jobs
+List background jobs
+bg
+Resume job in background
+fg
+Bring background job to foreground
+Disk & System Info
+Command
+Use
+df -h
+Disk usage of filesystems
+du -sh folder
+Size of folder
+free -m
+Memory usage in MB
+uptime
+System uptime and load
+uname -a
+System info (kernel, OS)
+Networking Basics
+Command
+Use
+ping 8.8.8.8
+Check connectivity
+ifconfig or ip addr
+Show IP addresses and interfaces
+netstat -tulnp or ss -tulnp
+Show listening ports
+Compression & Archiving
+Command
+Use
+tar -cvf file.tar folder/
+Archive folder
+tar -xvf file.tar
+Extract archive
+gzip file
+Compress file
+gunzip file.gz
+Decompress file
+zip file.zip folder/
+Compress into zip
+unzip file.zip
+Extract zip
+3️⃣ User & Group Management
+Command
+Use
+whoami
+Show current user
+id
+Show UID, GID, groups
+who
+Show logged-in users
+useradd trainee1
+Add new user
+usermod -aG group user
+Add user to group
+passwd user
+Change password
+groupadd group1
+Create group
+groups user
+Show user’s groups
+ sudo: Run commands as root.
+ root: Superuser, all privileges.
+4️⃣ Package Management
+ Ubuntu/Debian:
+o sudo apt update → update package list
+o sudo apt upgrade → upgrade installed packages
+o sudo apt install package → install package
+o sudo apt remove package → uninstall package
+ RHEL/CentOS:
+o sudo yum install package → install
+o sudo yum update → upgrade
+5️⃣ Bash Scripting Basics
+ Shebang: #!/bin/bash → tells OS to use bash
+ Variables: NAME=Madhura
+ Loops:
+for i in {1..5}; do
+echo $i
+done
+ Conditionals:
+if [ -f file.txt ]; then
+echo "File exists"
+fi
+ Read user input:
+read NAME
+echo "Hello $NAME"
+ Run script: bash script.sh or ./script.sh
+6️⃣ Logs & Monitoring
+ cat /var/log/syslog → View system logs
+ tail -f /var/log/messages → Monitor logs in real-time
+ top → See CPU/memory usage
+ df -h → Check disk space
+ du -sh /folder → Folder size
+ free -m → Memory usage
+ Identify high-CPU processes: top or ps -aux --sort=-%cpu | head
+7️⃣ Version Control (Bonus)
+ git clone <repo> → Copy repo
+ git add file → Stage changes
+ git commit -m "message" → Commit changes
+ git push → Push to remote
+8️⃣ Soft Skills
+ Explain commands and steps clearly.
+ Be curious, ask questions.
+ Take notes of what you did — documentation is valued.
+9️⃣ Hands-on Practice Checklist
+ Create/move/delete folders/files
+ Change permissions/ownership
+ Navigate /etc, /var, /home
+ Create simple bash scripts
+ Install/remove a package
+ Check disk, memory, CPU, processes
+ Monitor logs
+ Add/change users and groups
+Madhura, if you want, I can make a full table of “Task → Command → Expected Output → Notes” for all these commands,
+so you can literally practice everything like a lab sheet. It’ll make you interview-ready in 1 week.
+Do you want me to make that for you?

@@ -1,0 +1,18 @@
+FIRST DAY ON PRACTICING LINUX COMMANDS.
+BASIC COMMANDS.
+1.pwd->present working directing.
+2.ls-list files and folders
+3.ls -l-> detailed list 
+4.cd->change directory
+5.cd ..->go back
+6.cd directory name->move there.
+7.cd ~->go to pwd.
+
+FILE CRUD OPERATIONS:
+1.Create->mkdir->create diectory.
+touch-?create file.
+2.WRITE-> cat > filename->write info into file.
+if uses 2nd time ">" override info.
+cat >> filename->append info to existing info.
+To exit file after writing use ENTER & CNTRL+d.
+3.READ->cat filename.
