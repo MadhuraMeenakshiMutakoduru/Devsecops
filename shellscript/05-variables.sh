@@ -7,7 +7,7 @@ echo "Name of tis script $0"
 echo "Present working directory is $PWD"
 echo "User who is running this script is $USER"
 echo "Home directory of user is $HOME"
-echo "PID of script is $PID"
+echo "PID of script is $$"
 sleep 10 &
 echo "PID of recently executed process is $!"
 echo "All args passed to script is $*"
