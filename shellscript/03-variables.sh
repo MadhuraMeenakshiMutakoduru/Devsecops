@@ -5,3 +5,8 @@ echo "ENTER YOUR NAME"
 read USERNAME_CAPS
 
 echo "Username is : $USERNAME_CAPS"
+
+echo "enter your password"
+read -s PASSWORD
+
+echo "password is $PASSWORD"
