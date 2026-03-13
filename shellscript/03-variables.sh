@@ -2,6 +2,6 @@
 
 #GET VALUES FROM USER
 echo "ENTER YOUR NAME"
-read USERNAME
+read USERNAME_CAPS
 
-echo "Username is : $USERNAME"
+echo "Username is : $USERNAME_CAPS"
