@@ -11,7 +11,7 @@ END_TIME=$(date +%s)
 
 echo "script terminated at:$END_TIME"
 
-TOTAL_TIME=$(($START_TIME-$END_TIME))
+TOTAL_TIME=$(($END_TIME-$START_TIME))
 
 echo "script executed in:$TOTAL_TIME"
 
