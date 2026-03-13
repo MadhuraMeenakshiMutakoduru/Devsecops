@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM=$1
+NUM=90
 
 if [$NUM -gt 18]; then
    echo "Eligble to vote"
