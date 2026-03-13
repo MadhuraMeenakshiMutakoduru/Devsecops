@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #USE AND PRACTICE SPECIAL VARIABLE PROVIDED BY SHELL
-echo "All args passed to script $@"
+echo "All args passed to script $@" #trat agrs separetly
 echo "No. of variables passed to script $#"
 echo "Name of tis script $0"
 echo "Present working directory is $PWD"
@@ -10,4 +10,4 @@ echo "Home directory of user is $HOME"
 echo "PID of script is $$"
 sleep 10 &
 echo "PID of recently executed process is $!"
-echo "All args passed to script is $*"
+echo "All args passed to script is $*" #treat it as single arg
