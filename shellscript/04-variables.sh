@@ -1,6 +1,16 @@
 #!/bin/bash
 
 #Executes the date command and store the output into the variable
-TIMESTAMP=$(date)
+START_TIME=$(date +%s)
 
-echo "Script executes at :$TIMESTAMP"
+echo "Script executes at :$"
+
+END_TIME=$(date +%s)
+
+echo "script terminated at:$END_TIME"
+
+TOTAL_TIME=$(($START_TIME-$END_TIME))
+
+echo "script executed in:$TOTAL_TIME"
+
+
