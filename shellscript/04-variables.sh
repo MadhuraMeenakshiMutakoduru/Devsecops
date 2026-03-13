@@ -5,6 +5,8 @@ START_TIME=$(date +%s)
 
 echo "Script executes at :$START_TIME"
 
+sleep 10
+
 END_TIME=$(date +%s)
 
 echo "script terminated at:$END_TIME"
