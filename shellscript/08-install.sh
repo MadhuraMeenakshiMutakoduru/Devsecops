@@ -3,7 +3,7 @@
 USERID=$(id -u)
 
 if [$USERID -ne 0]; then
-    echo "Please enter script wit root acces"
+    echo "Please enter script with root access"
 fi
 
 dnf install nginx -y
