@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=$(echo "ENTER A NUMBER")
+NUMBER=6
 if [ $NUMBER % 2 = 0 ]; then
    echo "$NUMBER is EVEN NUMBER"
 else 
