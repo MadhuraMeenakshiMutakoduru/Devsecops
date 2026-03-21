@@ -2,7 +2,7 @@
 
 set -e #error handling just get out from execution but wont tell where it is got out for that we trap
 
-
+trap 'echo "There is a error in #LINE_NO, command $BASH_COMMAND"' ERR
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
