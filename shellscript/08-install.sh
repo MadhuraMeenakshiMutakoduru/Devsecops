@@ -21,9 +21,9 @@ fi
 echo "Installing mysql"
 dnf install mysql -y
 
-if [$? -n1 0 ]; then
+if [ $? -nq 0 ]; then
    echo "INSTALLING MYSQL....FAILURE"
    exit 1
 else
-   echo "INSTALLING MYSQL"
+   echo "INSTALLING MYSQL...SUCCESS"
 fi
