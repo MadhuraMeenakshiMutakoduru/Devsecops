@@ -5,7 +5,7 @@ LOGS_FOLDER="/var/log/shell-script" #create log folder to store track
 LOGS_FILE="/var/log/shell-script/$0.log" # create log file with script name inside folder.
 
 if [ $USERID -ne 0 ]; then
-   echo "Please run the script with root access" | tee -a $ LOGS_FILE
+   echo "Please run the script with root access" | tee -a $LOGS_FILE
    exit 1
 fi
 
